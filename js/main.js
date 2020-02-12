@@ -12,7 +12,8 @@ jQuery(document).ready(function($) {
 	$(".loader").delay(1000).fadeOut("slow");
   $("#overlayer").delay(1000).fadeOut("slow");	
   
-
+$("#home-section .text-center .text-uppercase").html("Hello User!");
+	$("#home-section .desc.aos-init").html("Welcome to the world of Adobe Target");
 	var siteMenuClone = function() {
 
 		$('.js-clone-nav').each(function() {
