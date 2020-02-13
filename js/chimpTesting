@@ -1,0 +1,12 @@
+<script>
+
+var intA=setInterval(function ()
+{
+if($("#home-section").is(":visible"))
+{
+clearInterval(intA);
+$("#home-section a[href='#contact-section']").hide();
+console.log("first test :  button is hidden now");
+}
+},100)
+</script>
