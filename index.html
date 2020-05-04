@@ -1,3 +1,34 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@AmbiTews 
+Learn Git and GitHub without any code!
+Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+
+
+AmbiTews
+/
+AdobeTargetSPADummyWebsite.github.io
+1
+00
+ Code
+ Issues 0
+ Pull requests 0 Actions
+ Projects 0
+ Wiki
+ Security 0
+ Insights
+ Settings
+AdobeTargetSPADummyWebsite.github.io/index.html
+@AmbiTews AmbiTews Update index.html
+55ef866 on Mar 3
+1151 lines (956 sloc)  46.7 KB
+  
 
 <!doctype html>
 <html lang="en">
@@ -220,6 +251,25 @@
      
     <div class="site-blocks-cover overlay" style="background-image: url(images/hero_2.jpg);" data-aos="fade" id="home-section">
 
+function triggerView(viewName) {
+	  viewName = sanitizeViewName(viewName) || 'home';
+	  console.log('Detected view: ' + viewName);
+
+	  // Validate if the Target Libraries are available on your website
+	  if (typeof adobe != 'undefined' && adobe.target && typeof adobe.target.triggerView === 'function') {
+	    adobe.target.triggerView(viewName);
+	  }
+	}
+
+	function sanitizeViewName(viewName) {
+	  if (viewName.startsWith('#')) {
+	    viewName = viewName.substr(1);
+	  }
+	  if (viewName.startsWith('/')) {
+	    viewName = viewName.substr(1);
+	  }
+	  return viewName;
+	}
       <div class="container">
         <div class="row align-items-center justify-content-center">
 
