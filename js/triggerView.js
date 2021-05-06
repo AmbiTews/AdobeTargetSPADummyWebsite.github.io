@@ -1,4 +1,3 @@
-<script>
 function sanitizeViewName(viewName) {
   if (viewName.startsWith('#')) {
     viewName = viewName.substr(1);
@@ -26,4 +25,4 @@ window.onhashchange = function() {
         triggerView(location.hash);
     }
 }
-</script>
+
